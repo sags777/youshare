@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/pname"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="This is users name"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/logout" />
+
+        <ImageView
+            android:id="@+id/profilepic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/pname"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/addimage"
+            android:scaleType="centerCrop" />
+
+        <Button
+            android:id="@+id/addppic"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/profilepic"
+            android:layout_marginLeft="10dp"
+            android:text="+Set Picture"
+            android:textSize="8dp" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="75dp"
+            android:layout_toEndOf="@+id/profilepic"
+            android:text="About Me:"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/about"
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="95dp"
+            android:layout_toEndOf="@+id/profilepic"
+            android:hint="Add something about you!!"
+            android:paddingTop="6dp" />
+
+        <Button
+            android:id="@+id/addbio"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/about"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/addppic"
+            android:text="+Set Bio"
+            android:textSize="8dp" />
+
+        <TextView
+            android:id="@+id/makepost"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/addbio"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Make a post: "
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/desc"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/makepost"
+            android:layout_marginLeft="10dp"
+            android:hint="Write a post here"
+            android:paddingTop="6dp" />
+
+        <Button
+            android:id="@+id/postimage"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/desc"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="+Photo"
+            android:textSize="8dp" />
+
+        <ImageView
+            android:id="@+id/postpic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/desc"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/postimage"
+            android:scaleType="centerCrop" />
+
+        <ProgressBar
+            android:id="@+id/postPicProgress"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/desc"
+            android:layout_toEndOf="@+id/postpic"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            />
+
+        <Button
+            android:id="@+id/publish"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/desc"
+            android:layout_marginLeft="154dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/postimage"
+            android:text="Publish"
+            android:textSize="8dp" />
+
+        <Button
+            android:id="@+id/viewact"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/publish"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="View All Posts" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listViewProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+
+        />
+</LinearLayout>
